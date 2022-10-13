@@ -1,0 +1,187 @@
+
+.box-main{
+    background-color: #65A4AC;
+    width: 100%;
+    padding: 30px 100px;
+    margin-top: 10%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.container{
+    position: relative;
+}
+span{
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+.box-main h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.box-main img{
+    position: absolute;
+    top: -75px;
+    right: 0;
+    width: 350px;
+}
+
+.dot-1{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.6;
+    position: absolute;
+    top: -2%;
+    right: -2%;
+  }
+  .dot-2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.6;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+  }
+  .dot-3{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.6;
+    position: absolute;
+    top: 30%;
+    right: 45%;
+  }
+  .dot-4{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.6;
+    position: absolute;
+    top:65%;
+    right: 60%;
+  }
+  .dot-5{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.6;
+    position: absolute;
+    top:86%;
+    right: 80%;
+    
+  }
+  .dot-6{
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.6;
+    position: absolute;
+    top:10%;
+    right: 93%;
+  }
+body{
+    background-color: #E8F1F3;
+}
+
+.container-course{
+    margin-top: 100px;
+}
+.course-flex{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.course-flex a{
+    display: block;
+    width: 30%;
+    margin: 20px;
+    text-decoration: none;
+}
+.course{
+  
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 250px;
+    border-radius: 30px;
+    position: relative;
+}
+.in-course-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.course h2,.course h4{
+    color: white;
+}
+.bi-three-dots-vertical , .bi-folder-fill{
+    color: white;
+    font-size: 2rem;
+}
+.course-bottom{
+    
+    display: flex;
+    align-items: center;
+ 
+    
+}
+.bi-folder-fill{
+    position: absolute;
+    left: 10%;
+    top: 75%;
+}
+.course-bottom img{
+    width: 170px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+.bi-plus-circle-fill{
+    color: #06565b;
+    font-size: 2.5rem;
+}
+
+
+
+@media screen and (max-width:1400px) {
+    .course-flex{
+        
+    }
+    .course-flex a{
+        display: block;
+        width: 30%;
+        margin: 10px;
+        text-decoration: none;
+    }
+   
+    
+}
+@media screen and (max-width:1023px) {
+    .box-main img{
+        position: absolute;
+        top: -20px;
+        right: 0;
+        width: 150px;
+    }
+    .container-course{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .course-flex{
+        
+    }
+    .course-flex a{
+        display: block;
+        width: 100%;
+        margin: 10px;
+        text-decoration: none;
+    }
+}
