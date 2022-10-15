@@ -4,7 +4,7 @@ const LoadingScreen = () => {
   return (
     <div className="progress">
       <div className="color">
-        Loaindg ...
+        <h1>LoadingScreen</h1>
       </div>
     </div>
   );

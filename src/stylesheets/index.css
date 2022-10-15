@@ -98,6 +98,7 @@ body{
 .course-flex{
     display: flex;
     flex-wrap: wrap;
+  
     
 }
 .course-flex .mybtn{
@@ -155,14 +156,17 @@ body{
 
 
 @media screen and (max-width:1400px) {
-    .course-flex{
-        
+    .course-flex Link{
+        width: 100%;
     }
     .course-flex a{
         display: block;
-        width: 30%;
+        width: 100%;
         margin: 10px;
         text-decoration: none;
+    }
+    .course-flex .mybtn{
+        width: 45%;
     }
    
     
@@ -177,6 +181,9 @@ body{
     .container-course{
         margin-top: 50px;
     }
+    .course-flex .mybtn{
+        width: 100%;
+    }
 }
 @media screen and (max-width:768px) {
     .course-flex{
@@ -187,5 +194,8 @@ body{
         width: 100%;
         margin: 10px;
         text-decoration: none;
+    }
+    .course-flex .mybtn{
+        width: 100%;
     }
 }

@@ -9,12 +9,13 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<LoginScreen />} exact/>
-        <Route element={<ProtectedRoutes/>}>
+        <Route path="/" element={<LoginScreen />} exact />
+        <Route element={<ProtectedRoutes />}>
           <Route path="/home" element={<MainScreen />} />
         </Route>
-        <Route path="/subject/:id" element={<SubjectScreen/>}/>
-
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/subject/:id" element={<SubjectScreen />} />
+        </Route>
         {/* <Route exact path="/resetpwd" element={<ForgotScreen/>}/>
       <Route exact path='/homepage' element={<HomePage/>}/> */}
       </Routes>

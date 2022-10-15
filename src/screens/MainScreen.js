@@ -14,7 +14,7 @@ const MainScreen = () => {
   let count = 1
   let color = ['#003a44', '#06565b', '#66a4ac']
   let count_color = -1
-  console.log(userData)
+ 
 
   useEffect(() => {
     axios.post('http://localhost:3300/sa/getUser', { std_code: _id })
@@ -67,7 +67,7 @@ const MainScreen = () => {
 
               return (
                 <Link to={"/subject/" + data.subj_id} className="mybtn">
-                  <a href={"/subject?subj=" + data.subj_id} >
+                  <a >
                     <div className="course" style={{ backgroundColor: color[count_color] }}>
                       <div className="in-course-flex">
                         <h2>{data.subj_name}</h2>

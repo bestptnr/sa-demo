@@ -47,7 +47,7 @@ const LoginScreen = () => {
                     setInterval(() => {
                         localStorage.setItem("status", true);
                         localStorage.setItem("code",response.data.std_code)
-                        navigate("/home");
+                        window.location = '/home'
                     },3000);
               
 
@@ -80,12 +80,7 @@ const LoginScreen = () => {
     }
 
 
-    useEffect(() => {
-        if (localStorage.getItem("status") == 'true') {
-            window.location='/home'
-        }
-    }, [])
-
+  
     return (
         <div className="box-center">
             <div className="box-1">

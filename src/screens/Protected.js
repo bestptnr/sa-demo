@@ -5,12 +5,13 @@ import MainScreen from "./MainScreen";
 
 const ProtectedRoutes = () =>{
     // localStorage.clear()
-   
+    
     let token = localStorage.getItem("status")
     let user = {}
-    console.log(token)
+
     if(token=="true"){
         user = {islogged:true}
+        
 
     }else{
         user = {islogged:false}
