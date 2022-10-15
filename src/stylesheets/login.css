@@ -73,8 +73,10 @@ input[type="text"]:focus , input[type="password"]:focus{
 }
 .error{
     text-align: left;
-    color: red;
+    color: rgb(253, 204, 204);
     font-size: 20px;
+    position:absolute;
+    
  
 }
 input[type="submit"]:focus{

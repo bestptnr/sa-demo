@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import "../stylesheets/style.css";
 import "../stylesheets/index.css";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import axios from "axios";
 import LoadingScreen from "./LoadingScreen";
 
@@ -11,9 +11,9 @@ const MainScreen = () => {
   const [isloading, setLoading] = useState(false)
   const _id = localStorage.getItem('code')
 
-  let count =1
-  let color =['#003a44','#06565b','66a4ac']
-  let count_color=-1
+  let count = 1
+  let color = ['#003a44', '#06565b', '#66a4ac']
+  let count_color = -1
   console.log(userData)
 
   useEffect(() => {
@@ -58,28 +58,33 @@ const MainScreen = () => {
 
           <div className="course-flex">
             {userData.map((data) => {
-             
+              if (count_color == 2) count_color = -1
               count_color++
-              let src ="/images/proson-"+count+".png"
+              let src = "/images/proson-" + count + ".png"
               count++
+              if (count > 3) count = 1
+
+
               return (
-                <a href="" style={{ display: "block" }}>
-                  <div className="course" style={{ backgroundColor: color[count_color] }}>
-                    <div className="in-course-flex">
-                      <h2>{data.subj_name}</h2>
-                      <i className="bi bi-three-dots-vertical"></i>
+                <Link to={"/subject/" + data.subj_id} className="mybtn">
+                  <a href={"/subject?subj=" + data.subj_id} >
+                    <div className="course" style={{ backgroundColor: color[count_color] }}>
+                      <div className="in-course-flex">
+                        <h2>{data.subj_name}</h2>
+                        <i className="bi bi-three-dots-vertical"></i>
+                      </div>
+                      <h4>{data.teachname}</h4>
+                      <div className="course-bottom">
+                        <i className="bi bi-folder-fill"></i>
+                        <img src={src} alt={count} />
+                      </div>
                     </div>
-                    <h4>{data.teachname}</h4>
-                    <div className="course-bottom">
-                      <i className="bi bi-folder-fill"></i>
-                      <img src={src} alt={count}/>
-                    </div>
-                  </div>
-                </a>
+                  </a>
+                 </Link>
               )
             })}
 
-            <a href="" style={{ display: "block" }}>
+            {/* <a href="" style={{ display: "block" }}>
               <div className="course" style={{ backgroundColor: "#66a4ac" }}>
                 <div className="in-course-flex">
                   <h2>SYSTEM ANALYSIS</h2>
@@ -91,7 +96,7 @@ const MainScreen = () => {
                   <img src="/images/proson-3.png" alt="person" />
                 </div>
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

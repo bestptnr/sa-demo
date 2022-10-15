@@ -63,6 +63,23 @@ const LoginScreen = () => {
                 });
         },
     });
+    let btn = document.getElementById("mybtn")
+    let myemail = document.getElementById("email")
+    let pwd = document.getElementById("password")
+    let position;
+    const submitPosition = () =>{
+        if(myemail.value=="" || pwd.value ==""){
+            console.log(pwd.value)
+            position ? (position=0) : (position=400)
+            btn.style.transform = `translate(${position}px,0px)`
+            btn.style.transition= "all 0.3s ease"
+        }else{
+            btn.style.transform = `translate(0px,0px)`
+        }
+
+    }
+
+
     useEffect(() => {
         if (localStorage.getItem("status") == 'true') {
             window.location='/home'
@@ -83,10 +100,12 @@ const LoginScreen = () => {
                             <div
                                 className="mt-3 text-start"
                                 style={{ fontSize: "30px", color: "#eeeeee" }}
+                        
                             >
                                 Email
                             </div>
                             <input
+                                    id="email"
                                 type="text"
                                 className="mt-1"
                                 {...formik.getFieldProps("email")}
@@ -99,6 +118,7 @@ const LoginScreen = () => {
                             <div
                                 className="mt-3 text-start"
                                 style={{ fontSize: "30px", color: "#eeeeee" }}
+                           
                             >
                                 Password
                             </div>
@@ -106,6 +126,7 @@ const LoginScreen = () => {
                                 type="password"
                                 className="mt-1"
                                 {...formik.getFieldProps("pwd")}
+                                id="password"
                             ></input>
                             {formik.touched.pwd && formik.errors.pwd ? (
                                 <div className="error">{formik.errors.pwd}</div>
@@ -118,7 +139,7 @@ const LoginScreen = () => {
                             </div>
                         </div>
                         <div className="mt-3">
-                            <input type="submit" value={status}></input>
+                            <input type="submit" value={status} id="mybtn" onMouseOver={submitPosition} ></input>
                         </div>
                     </form>
                 </div>
