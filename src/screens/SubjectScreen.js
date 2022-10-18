@@ -77,15 +77,7 @@ const SubjectScreen = () => {
                     )
                 })}
 
-                <div className='box-assign'>
-                    <div>
-                        <i class="bi bi-file-earmark"></i>
-                    </div>
-                    <div>
-                        <h4>New class work: ER-diagram design and Usecase design  </h4>
-                        <h5>Assigned on September 21 </h5>
-                    </div>
-                </div>
+             
             </div>
         )
     }

@@ -7,6 +7,7 @@
     position: relative;
     padding-bottom: 2rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     color: white;
 }
@@ -109,4 +110,10 @@ input[type="text"],input[type="password"]{
 .bi-file-earmark{
     font-size: 2.5rem;
     padding-right: 1.5rem;
+}
+@media screen and (max-width:1400px) {
+
+    .box-subject-two img{
+        display: none;
+    }
 }

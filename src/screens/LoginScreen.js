@@ -70,8 +70,8 @@ const LoginScreen = () => {
     const submitPosition = () =>{
         if(myemail.value=="" || pwd.value ==""){
             console.log(pwd.value)
-            position ? (position=0) : (position=400)
-            btn.style.transform = `translate(${position}px,0px)`
+            position ? (position=0) : (position=100)
+            btn.style.transform = `translateX(${-position}%)`
             btn.style.transition= "all 0.3s ease"
         }else{
             btn.style.transform = `translate(0px,0px)`

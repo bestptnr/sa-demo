@@ -10,7 +10,7 @@ const NavbarSubject = () => {
       <ul className="menu">
         <li className="nav-link">
           <a href="" className="nav-item ">
-            Cause
+            Course
           </a>
         </li>
         {/* <li className="nav-link">
